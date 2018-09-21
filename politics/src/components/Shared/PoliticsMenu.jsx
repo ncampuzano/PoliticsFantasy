@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Panel } from 'react-bootstrap';
-
+import PoliticsList from './PoliticsList';
 
 class PoliticsMenu extends Component {
   render() {
@@ -13,7 +13,7 @@ class PoliticsMenu extends Component {
         </Panel>
         <Panel bsStyle="primary">
           <Panel.Body>
-            Acá irán todos los políticos
+            <PoliticsList />
           </Panel.Body>
         </Panel>
       </div>
