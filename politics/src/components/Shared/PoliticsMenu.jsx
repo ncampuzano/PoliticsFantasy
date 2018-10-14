@@ -3,6 +3,7 @@ import { Panel } from 'react-bootstrap';
 import PoliticsList from './PoliticsList';
 
 class PoliticsMenu extends Component {
+
   render() {
     return(
       <div>
@@ -13,7 +14,7 @@ class PoliticsMenu extends Component {
         </Panel>
         <Panel bsStyle="primary">
           <Panel.Body>
-            <PoliticsList />
+            <PoliticsList onPress={this.props.onPress} />
           </Panel.Body>
         </Panel>
       </div>

@@ -1,14 +1,42 @@
 [
   {
     "id": 1,
-    "name": "Laura Vanessa",
-    "estudio": 4,
-    "posicion": 2
+    "nombre": "Laura Vanessa",
+    "profesion": 0.5,
+    "estudios": 0.5,
+    "cargos": 0.5,
+    "experiencia": 0.5
   },
   {
     "id": 2,
-    "name": "Gabriela Diaz",
-    "estudio": 2,
-    "posicion": -2
+    "nombre": "Gabriela Diaz",
+    "profesion": 0.5,
+    "estudios": 0.5,
+    "cargos": 0.5,
+    "experiencia": 0.5
+  },
+  {
+    "id": 3,
+    "nombre": "Gabriela Diaz 2",
+    "profesion": 0.5,
+    "estudios": 0.5,
+    "cargos": 0.5,
+    "experiencia": 0.5
+  },
+  {
+    "id": 4,
+    "nombre": "Gabriela Diaz 3",
+    "profesion": 0.5,
+    "estudios": 0.5,
+    "cargos": 0.5,
+    "experiencia": 0.5
+  },
+  {
+    "id": 5,
+    "nombre": "Gabriela Diaz 5",
+    "profesion": 0.5,
+    "estudios": 0.5,
+    "cargos": 0.5,
+    "experiencia": 0.5
   }
 ]
