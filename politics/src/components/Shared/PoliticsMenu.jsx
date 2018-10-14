@@ -14,7 +14,10 @@ class PoliticsMenu extends Component {
         </Panel>
         <Panel bsStyle="primary">
           <Panel.Body>
-            <PoliticsList onPress={this.props.onPress} />
+            <PoliticsList 
+              onPress={this.props.onPress} 
+              invalidList={this.props.invalidList} 
+            />
           </Panel.Body>
         </Panel>
       </div>

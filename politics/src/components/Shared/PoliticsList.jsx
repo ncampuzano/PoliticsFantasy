@@ -9,7 +9,11 @@ class PoliticsList extends Component {
       <ListGroup>
         {data.map((politico) => {
           return(
-            <ListGroupItem key={politico.id} onClick={() => this.props.onPress(politico.id)}> 
+            <ListGroupItem 
+              key={politico.id} 
+              onClick={() => this.props.onPress(politico.id)}
+              disabled={this.props.invalidList.indexOf(politico.id) > -1}
+            > 
               {politico.nombre} 
             </ListGroupItem>
           );

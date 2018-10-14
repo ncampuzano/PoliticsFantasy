@@ -5,7 +5,8 @@
     "profesion": 0.5,
     "estudios": 0.5,
     "cargos": 0.5,
-    "experiencia": 0.5
+    "experiencia": 0.5,
+    "imagen": ""
   },
   {
     "id": 2,
@@ -13,7 +14,8 @@
     "profesion": 0.5,
     "estudios": 0.5,
     "cargos": 0.5,
-    "experiencia": 0.5
+    "experiencia": 0.5,
+    "imagen": ""
   },
   {
     "id": 3,
@@ -21,7 +23,8 @@
     "profesion": 0.5,
     "estudios": 0.5,
     "cargos": 0.5,
-    "experiencia": 0.5
+    "experiencia": 0.5,
+    "imagen": ""
   },
   {
     "id": 4,
@@ -29,7 +32,8 @@
     "profesion": 0.5,
     "estudios": 0.5,
     "cargos": 0.5,
-    "experiencia": 0.5
+    "experiencia": 0.5,
+    "imagen": ""
   },
   {
     "id": 5,
@@ -37,6 +41,7 @@
     "profesion": 0.5,
     "estudios": 0.5,
     "cargos": 0.5,
-    "experiencia": 0.5
+    "experiencia": 0.5,
+    "imagen": ""
   }
 ]
