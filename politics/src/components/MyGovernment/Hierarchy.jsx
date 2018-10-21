@@ -3,6 +3,7 @@ import { Grid, Col, Row, Panel, Button } from 'react-bootstrap';
 import PoliticsMenu from '../Shared/PoliticsMenu';
 import InfoModal from '../Shared/InfoModal';
 import data from '../../data/politics.json';
+import ListaPuestos from '../Commons/ListaPuestos';
 
 class Hierarchy extends Component {
 
@@ -18,11 +19,23 @@ class Hierarchy extends Component {
     tituloExplicacion: '',
     explicacion: '',
     cargos: [
-      { nombre: '', imagen: '', estado: false, cargo: '', id: 1, idPolitico: 0},
-      { nombre: '', imagen: '', estado: false, cargo: '', id: 2, idPolitico: 0 },
-      { nombre: '', imagen: '', estado: false, cargo: '', id: 3, idPolitico: 0 },
-      { nombre: '', imagen: '', estado: false, cargo: '', id: 4, idPolitico: 0 },
-      { nombre: '', imagen: '', estado: false, cargo: '', id: 5, idPolitico: 0 },
+      { nombre: '', imagen: '', estado: false, cargo: 'Presidencia', id: 1, idPolitico: 0},
+      { nombre: '', imagen: '', estado: false, cargo: 'Vicepresidencia', id: 2, idPolitico: 0 },
+      { nombre: '', imagen: '', estado: false, cargo: 'Min. Trabajo', id: 3, idPolitico: 0 },
+      { nombre: '', imagen: '', estado: false, cargo: 'Min. Cultura', id: 4, idPolitico: 0 },
+			{ nombre: '', imagen: '', estado: false, cargo: 'Min. Transporte', id: 5, idPolitico: 0 },
+			{ nombre: '', imagen: '', estado: false, cargo: 'Min. Transporte', id: 6, idPolitico: 0 },
+			{ nombre: '', imagen: '', estado: false, cargo: 'Min. Trabajo', id: 7, idPolitico: 0 },
+      { nombre: '', imagen: '', estado: false, cargo: 'Min. Cultura', id: 8, idPolitico: 0 },
+			{ nombre: '', imagen: '', estado: false, cargo: 'Min. Transporte', id: 9, idPolitico: 0 },
+			{ nombre: '', imagen: '', estado: false, cargo: 'Min. Transporte', id: 10, idPolitico: 0 },
+			{ nombre: '', imagen: '', estado: false, cargo: 'Min. Trabajo', id: 11, idPolitico: 0 },
+      { nombre: '', imagen: '', estado: false, cargo: 'Min. Cultura', id: 12, idPolitico: 0 },
+			{ nombre: '', imagen: '', estado: false, cargo: 'Min. Transporte', id: 13, idPolitico: 0 },
+			{ nombre: '', imagen: '', estado: false, cargo: 'Min. Transporte', id: 14, idPolitico: 0 },
+			{ nombre: '', imagen: '', estado: false, cargo: 'Min. Trabajo', id: 15, idPolitico: 0 },
+      { nombre: '', imagen: '', estado: false, cargo: 'Min. Cultura', id: 16, idPolitico: 0 },
+			{ nombre: '', imagen: '', estado: false, cargo: 'Min. Transporte', id: 17, idPolitico: 0 },
     ],
     cargoActivo: 0,
     politicosEscogidos: [],
@@ -64,7 +77,8 @@ class Hierarchy extends Component {
       return false;
     }
     cargos[index] = {
-      ...this.initialState,
+			...this.initialState,
+			cargo: cargos[index].cargo,
       id: id
     }
     politicosEscogidos.splice(indexOf, 1);
@@ -86,7 +100,7 @@ class Hierarchy extends Component {
   }
   render() {
     return (
-      <Grid fluid style={{ marginTop: 70 }}>
+      <Grid fluid style={{ marginTop: 51 }}>
         <InfoModal  
           show={this.state.explicacionVisible}
           onHide={this.cerrarExplicacion}
@@ -95,34 +109,13 @@ class Hierarchy extends Component {
         />
         <Row>
           <Col xs={12} md={8}>
-            <Row>
-              Menu opciones
-            </Row>
-            <Row>
-              {this.state.cargos.map((element, index) => {
-                return (
-                  <Panel key={index}>
-                    <Panel.Body>
-                      {element.nombre}
-                      {element.estado &&
-                        <div>
-                          <Button 
-                            onClick={() => this.borrarPolitico(element.idPolitico, element.id)}
-                          >
-                            Borrar
-                          </Button>
-                          <Button
-                            onClick={() => this.abrirExplicacion(element.idPolitico)}
-                          >
-                            Info
-                          </Button>
-                        </div>
-                      }
-                    </Panel.Body>
-                  </Panel>
-                );
-              })}
-            </Row>
+						<Row>
+							<ListaPuestos 
+								puestos={this.state.cargos}
+								info={this.abrirExplicacion}
+								delete={this.borrarPolitico.bind(this)}
+							/>
+						</Row>
           </Col>
           <Col xs={12} md={4}>
             <Row>
