@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import chair from '../../images/chair.svg';
+import unfilled from '../../images/unfilled.png';
+import actived from '../../images/current.png';
 
 const tituloStyle = { 
 	background: 'linear-gradient(#808080, black)', 
@@ -7,13 +8,37 @@ const tituloStyle = {
 	borderRadius: '5px',
 	color: 'white',
 	fontFamily: 'Arial',
-	fontSize: '1.2rem'
+  fontSize: '1.2rem',
 }
-const imagenStyle = {
-	padding: '5%'
+const imagenStyleActive = {
+  width: '52px',
+  height: '48px',
+  cursor: 'pointer',
+  backgroundRepeat: 'no-repeat',
+  backgroundPosition: 'center top',
+  backgroundSize: 'cover',
+  backgroundImage: 'url('+actived+')',
+}
+const imagenStyleUnfilled = {
+  width: '52px',
+  height: '48px',
+  cursor: 'pointer',
+  backgroundRepeat: 'no-repeat',
+  backgroundPosition: 'center top',
+  backgroundSize: 'cover',
+  backgroundImage: 'url('+unfilled+')',
+}
+const imagenStyleSelected = {
+  width: '52px',
+  height: '48px',
+  cursor: 'pointer',
+  backgroundRepeat: 'no-repeat',
+  backgroundPosition: 'center top',
+  backgroundSize: 'cover',
+  backgroundImage: 'url('+unfilled+')',
 }
 const opcionesStyle = {
-	color: 'yellow',
+	color: 'white',
 	fontSize: '20px'
 }
 const deleteStyle = {
@@ -21,7 +46,10 @@ const deleteStyle = {
 	fontSize: '20px'
 }
 const containerStyle= {
-	padding: ''
+  padding: '5px',
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center'
 }
 
 class Puesto extends Component {	
@@ -29,23 +57,27 @@ class Puesto extends Component {
 		const { data } = this.props;
 		return(
 			<div style={containerStyle}>
-				<div >
+				<div style={{ position: 'absolute', margin: '0px 3vh 5vw'}}>
 					<i 
 						style={opcionesStyle}
 						className="fas fa-question-circle"
 						onClick={() => this.props.info(data.idPolitico)}
 					/>
-					{data.estado && 
+				
+				</div>
+        <div style={{ position: 'absolute', margin: '0px 15vh 5vw'}}>
+          {data.estado && 
 						<i 
 							style={deleteStyle}
 							className="fas fa-ban"
 							onClick={() => this.props.delete(data.idPolitico, data.id)}
 						/>
 					}
-				</div>
-				<div style={imagenStyle}>
-					<img src={chair} />
-				</div>
+        </div>
+        <div style={{ width: '100%', justifyContent: 'center', display: 'flex' }}>
+        {this.props.active && <div style={imagenStyleActive}></div>}
+        {!this.props.active && <div style={imagenStyleUnfilled} onClick={() => this.props.onClick(data.id)}></div>}
+        </div>
 				<div style={tituloStyle}>
 					{data.cargo} 
 					<br />

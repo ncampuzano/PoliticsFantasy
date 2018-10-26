@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Col, Row } from 'react-bootstrap';
-import CongresoImagen from '../../images/Congreso.jpg';
 import Puesto from './Puesto';
 
 class ListaPuestos extends Component {
@@ -10,21 +9,18 @@ class ListaPuestos extends Component {
 				<Puesto 
 					data={element}
 					info={this.props.info}
-					delete={this.props.delete}
+          delete={this.props.delete}
+          active={this.props.active == element.id}
+          onClick={this.props.onClick}
 				/>
 			</Col>
 		);	
 	}
 	render() {
-		const { puestos } = this.props;
+    const { puestos } = this.props;
+    console.log(this.props.active);
 		return(
-			<div 
-				style={{
-					backgroundImage: 'url(' + CongresoImagen + ')',
-					padding: '3%',
-					backgroundSize: 'cover'
-				}}
-			>
+			<div>
 				<Row style={{display: 'flex', justifyContent: 'center'}}>
 					{this.renderPuesto(puestos[0])}
 					{this.renderPuesto(puestos[1])}

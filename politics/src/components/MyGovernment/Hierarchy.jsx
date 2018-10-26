@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Grid, Col, Row, Panel, Button } from 'react-bootstrap';
 import PoliticsMenu from '../Shared/PoliticsMenu';
+import Background from '../../images/background.jpg';
 import InfoModal from '../Shared/InfoModal';
 import data from '../../data/politics.json';
 import ListaPuestos from '../Commons/ListaPuestos';
@@ -37,7 +38,7 @@ class Hierarchy extends Component {
       { nombre: '', imagen: '', estado: false, cargo: 'Min. Cultura', id: 16, idPolitico: 0 },
 			{ nombre: '', imagen: '', estado: false, cargo: 'Min. Transporte', id: 17, idPolitico: 0 },
     ],
-    cargoActivo: 0,
+    cargoActivo: 1,
     politicosEscogidos: [],
   }
   adicionarPolitico(id) {
@@ -98,6 +99,9 @@ class Hierarchy extends Component {
       explicacionVisible: false,
     });
   }
+  seleccionarPuesto(id){
+    this.setState({ cargoActivo: id });
+  }
   render() {
     return (
       <Grid fluid style={{ marginTop: 51 }}>
@@ -107,24 +111,32 @@ class Hierarchy extends Component {
           titulo={this.state.tituloExplicacion}
           explicacion={this.state.explicacion}
         />
-        <Row>
-          <Col xs={12} md={8}>
-						<Row>
-							<ListaPuestos 
-								puestos={this.state.cargos}
-								info={this.abrirExplicacion}
-								delete={this.borrarPolitico.bind(this)}
-							/>
-						</Row>
-          </Col>
+        <Row 
+          style={{
+            backgroundImage: 'url(' + Background + ')',
+            padding: '3%',
+            backgroundSize: 'cover',
+            backgroundPositionX: '50%',
+            backgroundPositionY: '-34px'
+          }}
+        >
           <Col xs={12} md={4}>
-            <Row>
-              <PoliticsMenu 
-                onPress={this.adicionarPolitico} 
-                invalidList={this.state.politicosEscogidos}
-              />
-            </Row>
+            <PoliticsMenu 
+              onPress={this.adicionarPolitico} 
+              invalidList={this.state.politicosEscogidos}
+            />
           </Col>
+          <Col xs={12} md={8}
+          >
+            <ListaPuestos 
+							puestos={this.state.cargos}
+							info={this.abrirExplicacion}
+              delete={this.borrarPolitico.bind(this)}
+              active={this.state.cargoActivo}
+              onClick={this.seleccionarPuesto.bind(this)}
+						/>
+          </Col>
+          
         </Row>
       </Grid>
     );

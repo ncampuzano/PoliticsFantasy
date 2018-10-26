@@ -6,7 +6,8 @@
     "estudios": 0.5,
     "cargos": 0.5,
     "experiencia": 0.5,
-    "imagen": ""
+    "imagen": "",
+    "partido": "Verde"
   },
   {
     "id": 2,
@@ -15,7 +16,8 @@
     "estudios": 0.5,
     "cargos": 0.5,
     "experiencia": 0.5,
-    "imagen": ""
+    "imagen": "",
+    "partido": "Verde"
   },
   {
     "id": 3,
@@ -24,7 +26,8 @@
     "estudios": 0.5,
     "cargos": 0.5,
     "experiencia": 0.5,
-    "imagen": ""
+    "imagen": "",
+    "partido": "Verde"
   },
   {
     "id": 4,
@@ -33,7 +36,8 @@
     "estudios": 0.5,
     "cargos": 0.5,
     "experiencia": 0.5,
-    "imagen": ""
+    "imagen": "",
+    "partido": "Verde"
   },
   {
     "id": 5,
@@ -42,6 +46,77 @@
     "estudios": 0.5,
     "cargos": 0.5,
     "experiencia": 0.5,
-    "imagen": ""
+    "imagen": "",
+    "partido": "Verde"
+  },
+  {
+    "id": 6,
+    "nombre": "Gabriela Diaz 6",
+    "profesion": 0.5,
+    "estudios": 0.5,
+    "cargos": 0.5,
+    "experiencia": 0.5,
+    "imagen": "",
+    "partido": "Verde"
+  },
+  {
+    "id": 6,
+    "nombre": "Gabriela Diaz 6",
+    "profesion": 0.5,
+    "estudios": 0.5,
+    "cargos": 0.5,
+    "experiencia": 0.5,
+    "imagen": "",
+    "partido": "Verde"
+  },
+  {
+    "id": 7,
+    "nombre": "Gabriela Diaz 7",
+    "profesion": 0.5,
+    "estudios": 0.5,
+    "cargos": 0.5,
+    "experiencia": 0.5,
+    "imagen": "",
+    "partido": "Verde"
+  },
+  {
+    "id": 8,
+    "nombre": "Gabriela Diaz 8",
+    "profesion": 0.5,
+    "estudios": 0.5,
+    "cargos": 0.5,
+    "experiencia": 0.5,
+    "imagen": "",
+    "partido": "Verde"
+  },
+  {
+    "id": 9,
+    "nombre": "Gabriela Diaz 9",
+    "profesion": 0.5,
+    "estudios": 0.5,
+    "cargos": 0.5,
+    "experiencia": 0.5,
+    "imagen": "",
+    "partido": "Verde"
+  },
+  {
+    "id": 10,
+    "nombre": "Gabriela Diaz 10",
+    "profesion": 0.5,
+    "estudios": 0.5,
+    "cargos": 0.5,
+    "experiencia": 0.5,
+    "imagen": "",
+    "partido": "Verde"
+  },
+  {
+    "id": 11,
+    "nombre": "Gabriela Diaz 11 ",
+    "profesion": 0.5,
+    "estudios": 0.5,
+    "cargos": 0.5,
+    "experiencia": 0.5,
+    "imagen": "",
+    "partido": "Verde"
   }
 ]
