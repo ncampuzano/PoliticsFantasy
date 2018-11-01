@@ -101,7 +101,7 @@ class Hierarchy extends Component {
 	explicacionPolitico(event, idPolitico){
     event.preventDefault();
     event.stopPropagation();
-    let politico = data[idPolitico];
+    let politico = data[idPolitico - 1];
     this.setState({
       explicacionVisible: true,
       tituloExplicacion: politico.nombreCompleto,
