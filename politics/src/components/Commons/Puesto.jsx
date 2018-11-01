@@ -8,7 +8,8 @@ const tituloStyle = {
 	borderRadius: '5px',
 	color: 'white',
 	fontFamily: 'Arial',
-  fontSize: '1.2rem',
+	fontSize: '1.2rem',
+	minHeight: '20px',
 }
 const imagenStyleActive = {
   width: '52px',
@@ -49,7 +50,8 @@ const containerStyle= {
   padding: '5px',
   display: 'flex',
   flexDirection: 'column',
-  justifyContent: 'center'
+	justifyContent: 'center',
+	minHeight: '108px'
 }
 
 class Puesto extends Component {	

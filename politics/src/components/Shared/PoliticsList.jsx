@@ -21,16 +21,31 @@ class PoliticsList extends Component {
               key={politico.id} 
               onClick={() => this.props.onPress(politico.id)}
               disabled={this.props.invalidList.indexOf(politico.id) > -1}
-              style={{
-                height: '61px',
-                padding: '10px 8px 10px 8px',
-                borderBottom: '1px solid rgba(255,255,255,.2)',
-                cursor: 'pointer',
-                color: 'white',
-                fontFamily: 'Roboto Regular,Helvetica,Arial,sans-serif,sans-serif',
-                display: 'flex',
-                justifyContent: 'space-between'
-              }}
+              style={
+								this.props.invalidList.indexOf(politico.id) > -1 ? 
+								{
+									height: '61px',
+									padding: '10px 8px 10px 8px',
+									borderBottom: '1px solid rgba(255,255,255,.2)',
+									cursor: 'pointer',
+									color: 'white',
+									fontFamily: 'Roboto Regular,Helvetica,Arial,sans-serif,sans-serif',
+									display: 'flex',
+									justifyContent: 'space-between',
+									backgroundColor: 'gray'
+								}
+								:
+								{
+									height: '61px',
+									padding: '10px 8px 10px 8px',
+									borderBottom: '1px solid rgba(255,255,255,.2)',
+									cursor: 'pointer',
+									color: 'white',
+									fontFamily: 'Roboto Regular,Helvetica,Arial,sans-serif,sans-serif',
+									display: 'flex',
+									justifyContent: 'space-between'
+								}
+							}
             > 
               <div 
                 style={{

@@ -5,7 +5,7 @@ import Puesto from './Puesto';
 class ListaPuestos extends Component {
 	renderPuesto(element) {
 		return(
-			<Col xs={3} style={{ width: '20%', padding: '1.5%' }} key={element.id}>
+			<Col xs={3} style={{ width: '20%'}} key={element.id}>
 				<Puesto 
 					data={element}
 					info={this.props.info}
@@ -23,11 +23,10 @@ class ListaPuestos extends Component {
 			<div>
 				<Row style={{display: 'flex', justifyContent: 'center'}}>
 					{this.renderPuesto(puestos[0])}
-					{this.renderPuesto(puestos[1])}
 				</Row>
 				<Row>
 					{puestos.map((element, index) => {
-						if(index  > 1){
+						if(index  > 0){
 							return this.renderPuesto(element);
 						}
 					})}
