@@ -137,10 +137,11 @@ class Hierarchy extends Component {
     }else if(66 <= dif && dif <= 100){
       swal("A estudiar", "Puedes mejorar tu gabinete, apoyate en la información", "warning");
     }else if(101 <= dif && dif <= 130){
-      swal("Intentalo de nuevo", "Es mejor que lo intentes de nuevo", "warning");
+      swal("Intentalo de nuevo", "Es mejor que lo intentes de nuevo, tu gabinete no es muy acertado", "warning");
     }else{
       swal("Error", "Ha ocurrido un error, elegiste el peor gabiente y no pensamos que fuera posible", "error");
     }
+
     console.log(dif);
     return null;
 	}
