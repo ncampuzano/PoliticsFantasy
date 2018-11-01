@@ -92,7 +92,7 @@ class PoliticsList extends Component {
                   justifyContent: 'center'
                 }}
               >
-                € 10.0
+              
               </div>
               
               <div
@@ -109,6 +109,7 @@ class PoliticsList extends Component {
 	                  fontSize: '20px'
                   }}
                   className="fas fa-question-circle"
+                  onClick={event => this.props.explicacionPolitico(event, politico.id)}
                 />
               </div>
             </div>

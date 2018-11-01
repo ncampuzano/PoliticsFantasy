@@ -4,7 +4,8 @@ import swal from 'sweetalert';
 import PoliticsMenu from '../Shared/PoliticsMenu';
 import Background from '../../images/background.jpg';
 import InfoModal from '../Shared/InfoModal';
-import data from '../../data/politics.json';
+import data from '../../data/politics.json'; 
+import posiciones from  '../../data/posiciones.json';
 import ListaPuestos from '../Commons/ListaPuestos';
 
 class Hierarchy extends Component {
@@ -14,39 +15,33 @@ class Hierarchy extends Component {
     this.adicionarPolitico =  this.adicionarPolitico.bind(this);
     this.abrirExplicacion = this.abrirExplicacion.bind(this);
 		this.cerrarExplicacion = this.cerrarExplicacion.bind(this); 
-		this.evaluar = this.evaluar.bind(this);
-    this.initialState = { nombre: '', imagen: '', estado: false, cargo: '', idPolitico: 0 };
+    this.evaluar = this.evaluar.bind(this);
+    this.explicacionPolitico = this.explicacionPolitico.bind(this);
+    this.initialState = { 
+      nombre: '', 
+      imagen: '', 
+      estado: false, 
+      idPolitico: 0
+    };
+    this.state = {
+      explicacionVisible: false,
+      tituloExplicacion: '',
+      explicacion: '',
+      cargos: posiciones,
+      cargoActivo: 1,
+      politicosEscogidos: [],
+    }
+
 	}
-  state = {
-    explicacionVisible: false,
-    tituloExplicacion: '',
-    explicacion: '',
-    cargos: [
-      { nombre: '', imagen: '', estado: false, cargo: 'Presidencia', id: 1, idPolitico: 0},
-      { nombre: '', imagen: '', estado: false, cargo: 'Min. Trabajo', id: 2, idPolitico: 0 },
-      { nombre: '', imagen: '', estado: false, cargo: 'Min. Trabajo', id: 3, idPolitico: 0 },
-      { nombre: '', imagen: '', estado: false, cargo: 'Min. Cultura', id: 4, idPolitico: 0 },
-			{ nombre: '', imagen: '', estado: false, cargo: 'Min. Transporte', id: 5, idPolitico: 0 },
-			{ nombre: '', imagen: '', estado: false, cargo: 'Min. Transporte', id: 6, idPolitico: 0 },
-			{ nombre: '', imagen: '', estado: false, cargo: 'Min. Trabajo', id: 7, idPolitico: 0 },
-      { nombre: '', imagen: '', estado: false, cargo: 'Min. Cultura', id: 8, idPolitico: 0 },
-			{ nombre: '', imagen: '', estado: false, cargo: 'Min. Transporte', id: 9, idPolitico: 0 },
-			{ nombre: '', imagen: '', estado: false, cargo: 'Min. Transporte', id: 10, idPolitico: 0 },
-			{ nombre: '', imagen: '', estado: false, cargo: 'Min. Trabajo', id: 11, idPolitico: 0 },
-      { nombre: '', imagen: '', estado: false, cargo: 'Min. Cultura', id: 12, idPolitico: 0 },
-			{ nombre: '', imagen: '', estado: false, cargo: 'Min. Transporte', id: 13, idPolitico: 0 },
-			{ nombre: '', imagen: '', estado: false, cargo: 'Min. Transporte', id: 14, idPolitico: 0 },
-			{ nombre: '', imagen: '', estado: false, cargo: 'Min. Trabajo', id: 15, idPolitico: 0 },
-      { nombre: '', imagen: '', estado: false, cargo: 'Min. Cultura', id: 16, idPolitico: 0 },
-    ],
-    cargoActivo: 1,
-    politicosEscogidos: [],
-  }
+  
   adicionarPolitico(id) {
     const index = id - 1;
     let { cargos, cargoActivo,
       politicosEscogidos } = this.state;
     if(politicosEscogidos.indexOf(id) > -1){
+      return false;
+    }
+    if(cargoActivo == -1 || cargos[cargoActivo - 1].estado){
       return false;
     }
     /* Actualizar cargos */
@@ -61,7 +56,7 @@ class Hierarchy extends Component {
     politicosEscogidos.push(id);
 
 		/* Activar el ID correcto */
-    if(cargoActivo === (cargos.length-1) ){
+    if(cargoActivo === cargos.length){
       cargoActivo = -1;
     } else {
       cargoActivo += 1;
@@ -78,8 +73,8 @@ class Hierarchy extends Component {
       return false;
     }
     cargos[index] = {
-			...this.initialState,
-			cargo: cargos[index].cargo,
+      ...cargos[index],
+      ...this.initialState,
       id: id
     }
     politicosEscogidos.splice(indexOf, 1);
@@ -88,10 +83,11 @@ class Hierarchy extends Component {
   }
 
   abrirExplicacion(id){
+    const puesto = this.state.cargos[id-1];
     this.setState({
       explicacionVisible: true,
-      tituloExplicacion: 'Titulo ' + id,
-      explicacion: 'explicacion' + id,
+      tituloExplicacion: 'Información sobre ' + puesto.cargo,
+      explicacion: puesto.descripcion,
     });
   }
   cerrarExplicacion(){
@@ -102,7 +98,16 @@ class Hierarchy extends Component {
   seleccionarPuesto(id){
     this.setState({ cargoActivo: id });
 	}
-	
+	explicacionPolitico(event, idPolitico){
+    event.preventDefault();
+    event.stopPropagation();
+    let politico = data[idPolitico];
+    this.setState({
+      explicacionVisible: true,
+      tituloExplicacion: politico.nombreCompleto,
+      explicacion: politico.descripcion,
+    });
+  }
 	evaluar(){
 		let validate = true;
 		this.state.cargos.forEach((element) => {
@@ -115,8 +120,29 @@ class Hierarchy extends Component {
 			swal("Aún te falta", "Tienes que elegir todo tu gabinete", "error");
 			return null;
 		}
-		
-		
+    let dif = 0; 
+    this.state.cargos.forEach((element) => {
+      if(element.estado){
+        let politico = data[element.idPolitico - 1];
+        dif += Math.abs(politico.profesion - element.profesion) * 10;
+        dif += Math.abs(politico.estudios - element.estudios) * 10;
+        dif += Math.abs(politico.experiencia - element.experiencia) * 10;
+        dif += Math.abs(politico.politica - element.politica) * 10;
+      }
+    });
+    if(0 <= dif && dif <= 30){
+      swal("Haz campaña", "Has elegido un excelente gabinete", "success");
+    }else if(31 <= dif && dif <= 65){
+      swal("¿Vice?", "Es un buen gabinete pero puedes mejorar", "success");
+    }else if(66 <= dif && dif <= 100){
+      swal("A estudiar", "Puedes mejorar tu gabinete, apoyate en la información", "warning");
+    }else if(101 <= dif && dif <= 130){
+      swal("Intentalo de nuevo", "Es mejor que lo intentes de nuevo", "warning");
+    }else{
+      swal("Error", "Ha ocurrido un error, elegiste el peor gabiente y no pensamos que fuera posible", "error");
+    }
+    console.log(dif);
+    return null;
 	}
   render() {
     return (
@@ -155,6 +181,7 @@ class Hierarchy extends Component {
             <PoliticsMenu 
               onPress={this.adicionarPolitico} 
               invalidList={this.state.politicosEscogidos}
+              explicacionPolitico={this.explicacionPolitico}
             />
           </Col>
           <Col xs={12} md={8}

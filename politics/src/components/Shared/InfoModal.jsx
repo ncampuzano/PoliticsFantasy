@@ -1,20 +1,13 @@
 import React, { Component } from  'react';
-import { Modal, Button } from 'react-bootstrap';
+import Modal from 'react-responsive-modal';
 
 class InfoModal extends Component{
     
   render() {
     return(
-      <Modal show={this.props.show} onHide={this.props.onHide}>
-        <Modal.Header closeButton>
-          <Modal.Title>{this.props.titulo}</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          {this.props.explicacion}
-        </Modal.Body>
-        <Modal.Footer>
-          <Button onClick={this.props.onHide}>Close</Button>
-        </Modal.Footer>
+      <Modal open={this.props.show} onClose={this.props.onHide} center>
+        <h2>{this.props.titulo}</h2>
+        <p> {this.props.explicacion} </p>
       </Modal>
     );
   }

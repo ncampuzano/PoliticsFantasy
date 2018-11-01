@@ -40,6 +40,7 @@ class PoliticsMenu extends Component {
           <PoliticsList 
             onPress={this.props.onPress} 
             invalidList={this.props.invalidList} 
+            explicacionPolitico={this.props.explicacionPolitico}
           />
         </div>
       </ScrollArea>

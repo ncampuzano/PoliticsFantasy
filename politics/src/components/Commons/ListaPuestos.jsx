@@ -18,7 +18,6 @@ class ListaPuestos extends Component {
 	}
 	render() {
     const { puestos } = this.props;
-    console.log(this.props.active);
 		return(
 			<div>
 				<Row style={{display: 'flex', justifyContent: 'center'}}>

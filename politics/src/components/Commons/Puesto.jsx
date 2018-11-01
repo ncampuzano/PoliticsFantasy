@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import unfilled from '../../images/unfilled.png';
 import actived from '../../images/current.png';
+import filled from  '../../images/filled.png';
 
 const tituloStyle = { 
 	background: 'linear-gradient(#808080, black)', 
@@ -19,6 +20,15 @@ const imagenStyleActive = {
   backgroundPosition: 'center top',
   backgroundSize: 'cover',
   backgroundImage: 'url('+actived+')',
+}
+const imagenStyleFilled = {
+  width: '52px',
+  height: '48px',
+  cursor: 'pointer',
+  backgroundRepeat: 'no-repeat',
+  backgroundPosition: 'center top',
+  backgroundSize: 'cover',
+  backgroundImage: 'url('+filled+')',
 }
 const imagenStyleUnfilled = {
   width: '52px',
@@ -63,7 +73,7 @@ class Puesto extends Component {
 					<i 
 						style={opcionesStyle}
 						className="fas fa-question-circle"
-						onClick={() => this.props.info(data.idPolitico)}
+						onClick={() => this.props.info(data.id)}
 					/>
 				
 				</div>
@@ -77,8 +87,9 @@ class Puesto extends Component {
 					}
         </div>
         <div style={{ width: '100%', justifyContent: 'center', display: 'flex' }}>
-        {this.props.active && <div style={imagenStyleActive}></div>}
-        {!this.props.active && <div style={imagenStyleUnfilled} onClick={() => this.props.onClick(data.id)}></div>}
+          {data.estado && <div style={imagenStyleFilled}></div>}
+          {!data.estado && this.props.active && <div style={imagenStyleActive}></div>}
+          {!data.estado && !this.props.active && <div style={imagenStyleUnfilled} onClick={() => this.props.onClick(data.id)}></div>}
         </div>
 				<div style={tituloStyle}>
 					{data.cargo} 
