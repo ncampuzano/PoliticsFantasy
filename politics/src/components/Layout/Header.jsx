@@ -16,8 +16,7 @@ class Header extends Component {
         <Navbar.Collapse>
           <Nav>
             <NavItem eventKey={1} componentClass={Link} href="/" to="/">Mi gobierno</NavItem>
-            <NavItem eventKey={1} componentClass={Link} href="/" to="/">Reglas</NavItem>
-            <NavItem eventKey={1} componentClass={Link} href="/" to="/">Ayuda</NavItem>
+            <NavItem eventKey={2} componentClass={Link} href="/ayuda" to="/ayuda">Ayuda</NavItem>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

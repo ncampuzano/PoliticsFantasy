@@ -6,11 +6,12 @@
     "estado": false, 
     "idPolitico": 0, 
     "cargo": "Presidencia",
-    "descripcion": "Dirigimos el interior...",
-    "profesion": 1,
-    "estudios": 0.8,
-    "experiencia": 0.6,
-    "politica": 1
+    "descripcion": "Se encuentra conformado por un sector central, el cual consta del departamento administrativo de la Presidencia de la República, que busca asistir al Presidente en su calidad de Jefe de Estado, Jefe de Gobierno y Suprema Autoridad Administrativa en el ejercicio de sus atribuciones constitucionales y legales; Y uno descentralizado, el cual está conformado por las entidades administrativas, siendo estas de dos tipos: las especiales con personería jurídica y la agencia estatal. <br \/><br \/> <strong>Artículo 191.<\/strong> Para ser Presidente de la República se requiere ser colombiano por nacimiento, ciudadano en ejercicio y mayor de treinta años. <br \/> <br \/> En caso de renuncia del presidente o del vicepresidente, se presentarán ante el senado quien decidirá si las admite.",
+    "profesion": 0.8,
+    "estudios": 0.9,
+    "experiencia": 1,
+    "politica": 1,
+    "diagrama": null
   },
   {
     "id": 2,
@@ -19,11 +20,13 @@
     "estado": false, 
     "idPolitico": 0, 
     "cargo": "Min. Hacienda",
-    "descripcion": "Somos el Ministerio que coordina la política macroeconómica; define, formula y ejecuta la política fiscal del país; incide en los sectores económicos, gubernamentales y políticos; y gestiona los recursos públicos de la Nación, desde la perspectiva presupuestal y financiera, mediante actuaciones transparentes, personal competente y procesos eficientes, con el fin de propiciar: Las condiciones para el crecimiento económico sostenible, y la estabilidad y solidez de la economía y del sistema financiero; en pro del fortalecimiento de las instituciones, el apoyo a la descentralización y el bienestar social de los ciudadanos.",
+    "descripcion": "Su naturaleza jurídica se desprende del sector central de la administración pública nacional, el cual tiene como objetivo dentro del marco de sus competencias y de la ley formular, adoptar, dirigir, coordinar y ejecutar la política pública, planes, programas y proyectos en materia de derechos humanos, derecho internacional humanitario, integración de la nación con las entidades territoriales, seguridad y convivencia ciudadana. <br \/> <br \/> Por otro lado, se encuentra el sector descentralizado el cual está conformado por las entidades adscritas, siendo estas las unidades administrativas especiales y los establecimientos públicos, y en segundo lugar las entidades vinculadas",
     "profesion": 1,
     "estudios": 0.6,
     "experiencia": 0.7,
-    "politica": 0.8
+    "politica": 0.8,
+    "diagrama": "hacienda.jpg"
+    
   },
   {
     "id": 3,
@@ -32,11 +35,12 @@
     "estado": false, 
     "idPolitico": 0, 
     "cargo": "Min. TIC",
-    "descripcion": "Dirigimos la tecnología...",
+    "descripcion": "Su naturaleza jurídica se desprende del sector central de la administración nacional, tiene como objetivo principal diseñar, formular, adoptar y promover las políticas, planes, programas y proyectos del sector de tecnologías de la información y las comunicaciones, en correspondencia con la Constitución Política y la ley, con el fin de contribuir al desarrollo económico, social y político de la nación. Además, promover el uso y apropiación de las tecnologías de la información y las comunicaciones, entre los ciudadanos, las empresas y el gobierno. <br \/> <br \/> Por otro lado, en el sector descentralizado se encuentran las entidades adscritas, conformadas por unidades administrativas especiales sin y con personería jurídica, y las entidades vinculadas, conformadas por empresas industriales y comerciales del estado.",
     "profesion": 1,
     "estudios": 0.9,
     "experiencia": 0.9,
-    "politica": 0
+    "politica": 0,
+    "diagrama": "tic.jpg"
   },
   {
     "id": 4,
@@ -45,11 +49,12 @@
     "estado": false, 
     "idPolitico": 0, 
     "cargo": "Min. Justicia",
-    "descripcion": "Dirigimos la justicia...",
+    "descripcion": "Su naturaleza jurídica se desprende del sector central de la administración nacional, siendo su objetivo formular, adoptar, coordinar, dirigir y ejecutar la política pública en materia de ordenamiento jurídico, de defensa y seguridad jurídica, drogas, acceso a la justicia formal y alternativa, lucha contra la criminalidad, mecanismos judiciales transicionales, prevención y control de delito. Además, es el encargado de coordinar las relaciones entre la rama ejecutiva, la rama judicial, el ministerio público, los organismos de control y demás entidades públicas y privadas, para el desarrollo y consolidación de la política pública en materia de justicia y derecho. <br \/> <br \/> Por otro lado, en el sector descentralizado se encuentran las entidades adscritas, conformadas por los establecimientos públicos, unidades administrativas especiales y las superintendencias con personería jurídica; y vinculadas. ",
     "profesion": 1,
     "estudios": 0.9,
     "experiencia": 0.7,
-    "politica": 1
+    "politica": 1,
+    "diagrama": "justicia.jpg"
   },
   {
     "id": 5,
@@ -58,11 +63,12 @@
     "estado": false, 
     "idPolitico": 0, 
     "cargo": "Min. del Interior",
-    "descripcion": "Dirigimos el interior...",
+    "descripcion": "Su naturaleza jurídica se desprende del sector central de la administración pública nacional, el cual tiene como objetivo dentro del marco de sus competencias y de la ley formular, adoptar, dirigir, coordinar y ejecutar la política pública, planes, programas y proyectos en materia de derechos humanos, derecho internacional humanitario, integración de la nación con las entidades territoriales, seguridad y convivencia ciudadana. <br \/> <br \/> Por otro lado, se encuentra el sector descentralizado el cual está conformado por las entidades adscritas, siendo estas las unidades administrativas especiales y los establecimientos públicos, y en segundo lugar las entidades vinculadas.",
     "profesion": 1,
     "estudios": 0.6,
     "experiencia": 0.7,
-    "politica": 1
+    "politica": 1,
+    "diagrama": "interior.jpg"
   },
   {
     "id": 6,
@@ -71,11 +77,12 @@
     "estado": false, 
     "idPolitico": 0, 
     "cargo": "Min. del exterior",
-    "descripcion": "Dirigimos el interior...",
+    "descripcion": "Es el organismo rector del sector administrativo de relaciones exteriores, y su naturaleza jurídica se desprende del sector central, al cual le corresponde formular, planear, coordinar y ejecutar la política exterior de Colombia, las Relaciones internacionales y administrar el servicio exterior de la república. <br \/> <br \/> Por otro lado, en el sector descentralizado se encuentran las entidades adscritas.",
     "profesion": 1,
     "estudios": 0.9,
     "experiencia": 0.6,
-    "politica": 0.6
+    "politica": 0.6,
+    "diagrama": "exteriores.jpg"
   },
   {
 
@@ -85,11 +92,12 @@
     "estado": false, 
     "idPolitico": 0, 
     "cargo": "Min. de Defensa",
-    "descripcion": "Dirigimos el interior...",
+    "descripcion": "Su naturaleza jurídica se desprende del sector central de la administración nacional, tiene como objetivos primordiales la formulación y adopción de las políticas, planes generales, programas y proyectos del sector administrativo, para la defensa de la soberanía, la independencia y la integridad territorial. Además, el mantenimiento del orden constitucional y la garantía de la convivencia democrática. <br \/> <br \/> Por otro lado, en el sector descentralizado se encuentran las entidades adscritas, constituidas por la superintendencia con personería jurídica y establecimientos públicos de las fuerzas militares, y vinculadas, las cuales cuentan con las empresas industriales y comerciales y las sociedades de economía mixta.",
     "profesion": 1,
     "estudios": 0.5,
     "experiencia": 1,
-    "politica": 0.8
+    "politica": 0.8,
+    "diagrama": "defensa.jpg"
   },
   {
     "id": 8,
@@ -98,11 +106,12 @@
     "estado": false, 
     "idPolitico": 0, 
     "cargo": "Min. agricultura",
-    "descripcion": "Dirigimos el interior...",
+    "descripcion": "Su naturaleza jurídica se desprende del sector central de la administración nacional, teniendo como objetivo promover el desarrollo rural con enfoque territorial y el fortalecimiento de la productividad y competitividad de los productos agropecuarios, para obtener un mejor aprovechamiento de los recursos naturales y, asimismo, generar empleo y un crecimiento sostenido. <br \/> <br \/> Por otro lado, en el sector descentralizado el sector agropecuario, pesquero y de desarrollo rural está conformado por entidades adscritas con personería jurídica, siendo estos los establecimientos públicos, unidades administrativas especiales y agencias estatales de naturaleza especial, y sin personería jurídica. Y, se encuentran las entidades vinculadas, conformadas por sociedades de economía mixta y corporaciones de participación mixta.",
     "profesion": 1,
     "estudios": 0.8,
     "experiencia": 0.7,
-    "politica": 0.6
+    "politica": 0.6,
+    "diagrama": "rural.jpg"
   },
   {
     "id": 9,
@@ -111,11 +120,12 @@
     "estado": false, 
     "idPolitico": 0, 
     "cargo": "Min. salud",
-    "descripcion": "Dirigimos el interior...",
+    "descripcion": "Su naturaleza jurídica se desprende del sector central de la administración nacional, y dentro del marco de sus competencias tiene como objetivo formular, adoptar, dirigir, coordinar, ejecutar y evaluar la política pública en materia de salud, salud pública y promoción social en salud. Además, cuenta con participación para formular políticas en materia de pensiones, beneficios económicos periódicos y riesgos profesionales. <br \/> <br \/> Por otro lado, se encuentra el sector descentralizado, el cual se encuentra conformado por entidades adscritas, estas a su vez se conforman por superintendencias, establecimientos públicos, empresas sociales del estado y la administradora de recursos del sistema general de seguridad social en salud (ADRES).",
     "profesion": 1,
     "estudios": 0.9,
     "experiencia": 1,
-    "politica": 0
+    "politica": 0,
+    "diagrama": "salud.jpg"
   },
   {
     "id": 10,
@@ -124,11 +134,12 @@
     "estado": false, 
     "idPolitico": 0, 
     "cargo": "Min. trabajo",
-    "descripcion": "Dirigimos el interior...",
+    "descripcion": "Su naturaleza jurídica se desprende del sector central de la administración nacional, y como objetivo tiene la formulación y adopción de políticas, planes generales, programas y proyectos para el trabajo, dando lugar al respeto de los derechos fundamentales, las garantías de los trabajadores, el fortalecimiento, promoción y protección de las actividades de la economía solidaria y el trabajo decente. <br \/> <br \/> Por otro lado, en el sector descentralizado se encuentran las entidades adscritas, conformadas por superintendencias, establecimientos públicos, unidades administrativas especiales con personería jurídica; y las entidades vinculadas, las cuales se conforman por las empresas industriales y comerciales del estado.",
     "profesion": 1,
     "estudios": 0.9,
     "experiencia": 0.4,
-    "politica": 0.8
+    "politica": 0.8,
+    "diagrama": "trabajo.jpg"
   },
   {
     "id": 11,
@@ -137,11 +148,12 @@
     "estado": false, 
     "idPolitico": 0, 
     "cargo": "Min. minas",
-    "descripcion": "Dirigimos el interior...",
+    "descripcion": "Su naturaleza jurídica se desprende del sector central de la administración nacional, teniendo como objetivo formular, adoptar, dirigir y coordinar las políticas, planes y programas del sector de minas y energía. <br \/> <br \/> Por otro lado, en el sector descentralizado se encuentran las entidades adscritas, tales como las unidades administrativas especiales sin y con personería jurídica, establecimientos públicos, agencias estatales e institutos, y las entidades vinculadas, las cuales son las sociedades de economía mixta y las empresas de servicios públicos domiciliarios.",
     "profesion": 0.8,
     "estudios": 1,
     "experiencia": 0.5,
-    "politica": 1
+    "politica": 1,
+    "diagrama": "minas.jpg"
   },
   {
     "id": 12,
@@ -150,11 +162,12 @@
     "estado": false, 
     "idPolitico": 0, 
     "cargo": "Min. comercio",
-    "descripcion": "Dirigimos el interior...",
+    "descripcion": "Su naturaleza jurídica se desprende del sector central de la administración nacional, tiene como objetivo formular, adoptar, dirigir y coordinar las políticas generales en materia de desarrollo económico y social del país, relacionadas con la competitividad, integración y desarrollo de los sectores productivos de la industria, la micro, pequeña y mediana empresa, el comercio exterior de bienes y servicios y tecnología, la promoción de inversión extranjera, el comercio interno y el turismo. Además, de ejecutar las políticas, planes generales, programas y proyectos de comercio exterior. <br \/> <br \/> Por otro lado, en el sector descentralizado se encuentra conformado por entidades adscritas, siendo estas las superintendencias con personería jurídica y unidades administrativas especiales con personería jurídica, y las entidades vinculadas, las cuales son las sociedades de economía mixta y las corporaciones e instituciones de investigación.",
     "profesion": 1,
     "estudios": 0.8,
     "experiencia": 0.6,
-    "politica": 0.4
+    "politica": 0.4,
+    "diagrama": "turismo.jpg"
   },
   {
     "id": 13,
@@ -163,11 +176,12 @@
     "estado": false, 
     "idPolitico": 0, 
     "cargo": "Min. educación",
-    "descripcion": "Dirigimos el interior...",
+    "descripcion": "su naturaleza jurídica se desprende del sector central de la administración nacional, tiene como objetivos establecer las políticas y los lineamientos para dotar al sector educativo de un servicio de calidad con acceso equitativo y con permanencia en el sistema, diseñar estándares que definan el nivel fundamental de calidad de la educación, garantizar y promover, por parte del estado a través de políticas públicas, el derecho y el acceso a un sistema educativo público sostenible y de calidad. Además, debe orientar la educación superior en el marco de la autonomía universitaria, velar por la calidad de la educación mediante el ejercicio de las funciones de regulación, inspección, vigilancia y evaluación. <br \/> <br \/> Por otro lado, en el sector descentralizado se conforma por las entidades adscritas, siendo los establecimientos públicos, y las entidades vinculadas, las cuales son las sociedades de economía mixta y las entidades de naturaleza especial. ",
     "profesion": 1,
     "estudios": 0.9,
     "experiencia": 0.9,
-    "politica": 0.6
+    "politica": 0.6,
+    "diagrama": "educacion.jpg"
   },
   {
     "id": 14,
@@ -176,11 +190,12 @@
     "estado": false, 
     "idPolitico": 0, 
     "cargo": "Min. ambiente",
-    "descripcion": "Dirigimos el interior...",
+    "descripcion": " su naturaleza jurídica se desprende del sector central de la administración nacional, tiene como objetivo orientar y regular el ordenamiento ambiental del territorio y de definir las políticas y regulaciones a las que sujetaran la recuperación, conservación, protección, ordenamiento, manejo, uso y aprovechamiento sostenible de los recursos renovables y del ambiente de la nación, con el fin de asegurar el desarrollo sostenible. Además, tiene el deber de formular la política nacional ambiental y de recursos renovables de manera que se garantice el derecho de todas las personas a gozar de un medio ambiente sano y se proteja el patrimonio natural y la soberanía de la nación. <br \/> <br \/> Por otro lado, en el sector descentralizado se conforma por entidades adscritas, como los establecimientos públicos, y entidades vinculadas, las cuales son las corporaciones e instituciones de investigación.  ",
     "profesion": 1,
     "estudios": 0.8,
     "experiencia": 0.6,
-    "politica": 1
+    "politica": 1,
+    "diagrama": "ambiente.jpg"
   },
   {
     "id": 15,
@@ -189,11 +204,12 @@
     "estado": false, 
     "idPolitico": 0, 
     "cargo": "Min. vivienda",
-    "descripcion": "Dirigimos el interior...",
-    "profesion": 1,
+    "descripcion": " su naturaleza jurídica se desprende del sector central de la administración nacional, tiene como objetivo formular, adoptar, dirigir, coordinar y ejecutar la política pública, planes y proyectos en materia de desarrollo territorial y urbano planificado del país, la consolidación de ciudades, con patrones de uso eficiente y sostenible del suelo, teniendo en cuenta las condiciones de acceso y financiación de vivienda y de prestación de los servicios públicos de agua potable y saneamiento básico. <br \/> <br \/> Por otro lado, en el sector descentralizado está conformado por las unidades administrativas especiales sin personería jurídica, entidades adscritas y entidades vinculadas. ",
+    "profesion": 0.7,
     "estudios": 0.8,
     "experiencia": 0.6,
-    "politica": 1
+    "politica": 1,
+    "diagrama": "vivienda.jpg"
   },
   {
     "id": 16,
@@ -202,11 +218,12 @@
     "estado": false, 
     "idPolitico": 0, 
     "cargo": "Min. transporte",
-    "descripcion": "Dirigimos el interior...",
-    "profesion": 1,
-    "estudios": 0.8,
-    "experiencia": 0.6,
-    "politica": 1
+    "descripcion": "su naturaleza jurídica se desprende del sector central de la administración nacional, cuyo objetivo es la formulación y adopción de las políticas, planes, programas, proyectos y regulación económica en materia de transporte, tránsito e infraestructura de los modos de transporte carretero, marítimo, fluvial, férreo y aéreo. Además, la regulación técnica en materia de transporte y tránsito. <br \/> <br \/> Por otro lado, en el sector descentralizado está conformado por las entidades adscritas, las cuales son las unidades administrativas especiales, establecimientos públicos, agencia estatal y la superintendencia.",
+    "profesion": 0.8,
+    "estudios": 0.9,
+    "experiencia": 0.8,
+    "politica": 1,
+    "diagrama": "transporte.jpg"
   },
   {
     "id": 17,
@@ -215,10 +232,11 @@
     "estado": false, 
     "idPolitico": 0, 
     "cargo": "Min. cultura",
-    "descripcion": "Dirigimos el interior...",
-    "profesion": 1,
+    "descripcion": "su naturaleza jurídica se desprende del sector central de la administración nacional, y como objetivo principal tiene formular, coordinar, ejecutar y vigilar la política del Estado en materia cultural, deportiva, recreativa y el aprovechamiento del tiempo libre, de manera coherente con los planes de desarrollo, con los principios fundamentales contemplados en la Constitución Política y en la ley. <br \/> <br \/> Por otro lado, en el sector descentralizado conformado por las entidades adscritas, las cuales son establecimientos públicos.",
+    "profesion": 0.8,
     "estudios": 0.8,
-    "experiencia": 0.6,
-    "politica": 1
+    "experiencia": 1,
+    "politica": 1,
+    "diagrama": "cultura.jpg"
   }
 ]

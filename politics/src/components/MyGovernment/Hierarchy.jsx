@@ -30,6 +30,7 @@ class Hierarchy extends Component {
       cargos: posiciones,
       cargoActivo: 1,
       politicosEscogidos: [],
+      diagrama: null,
     }
 
 	}
@@ -86,8 +87,9 @@ class Hierarchy extends Component {
     const puesto = this.state.cargos[id-1];
     this.setState({
       explicacionVisible: true,
-      tituloExplicacion: 'Información sobre ' + puesto.cargo,
+      tituloExplicacion: puesto.cargo,
       explicacion: puesto.descripcion,
+      diagrama: puesto.diagrama,
     });
   }
   cerrarExplicacion(){
@@ -106,6 +108,7 @@ class Hierarchy extends Component {
       explicacionVisible: true,
       tituloExplicacion: politico.nombreCompleto,
       explicacion: politico.descripcion,
+      diagrama: null
     });
   }
 	evaluar(){
@@ -153,6 +156,7 @@ class Hierarchy extends Component {
           onHide={this.cerrarExplicacion}
           titulo={this.state.tituloExplicacion}
           explicacion={this.state.explicacion}
+          diagrama={this.state.diagrama}
         />
         <Row 
           style={{
